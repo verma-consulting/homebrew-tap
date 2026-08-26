@@ -1,4 +1,6 @@
 # Validate Formula PRs (brew audit + install + test).
+# Homebrew no longer accepts path args for `brew audit` — register this
+# checkout as the tap and address the formula by tap-qualified name.
 
 name: Tests
 
@@ -24,15 +26,33 @@ jobs:
       - name: Checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
+      - name: brew update
+        run: brew update
+
+      - name: Register checkout as verma-consulting/tap
+        run: |
+          tap_dir="$(brew --repository)/Library/Taps/verma-consulting/homebrew-tap"
+          mkdir -p "$(dirname "${tap_dir}")"
+          rm -rf "${tap_dir}"
+          ln -s "${GITHUB_WORKSPACE}" "${tap_dir}"
+
+      - name: Trust tap (when supported)
+        run: |
+          if brew trust --help >/dev/null 2>&1; then
+            brew trust --tap verma-consulting/tap
+          else
+            echo "brew trust not available — skipping"
+          fi
+
       - name: brew audit
         run: |
-          brew audit --strict --online Formula/vermastaff.rb || \
-            brew audit --strict Formula/vermastaff.rb
+          brew audit --strict --online verma-consulting/tap/vermastaff || \
+            brew audit --strict verma-consulting/tap/vermastaff
 
       - name: brew install
         run: |
-          brew install --build-from-source ./Formula/vermastaff.rb || \
-            brew reinstall --build-from-source ./Formula/vermastaff.rb
+          brew install --build-from-source verma-consulting/tap/vermastaff || \
+            brew reinstall --build-from-source verma-consulting/tap/vermastaff
 
       - name: brew test
-        run: brew test ./Formula/vermastaff.rb
+        run: brew test verma-consulting/tap/vermastaff
