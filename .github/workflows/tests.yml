@@ -1,0 +1,38 @@
+# Validate Formula PRs (brew audit + install + test).
+
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches: [master, main]
+
+concurrency:
+  group: tap-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  formula:
+    name: brew audit / install / test
+    runs-on: macos-15
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - name: brew audit
+        run: |
+          brew audit --strict --online Formula/vermastaff.rb || \
+            brew audit --strict Formula/vermastaff.rb
+
+      - name: brew install
+        run: |
+          brew install --build-from-source ./Formula/vermastaff.rb || \
+            brew reinstall --build-from-source ./Formula/vermastaff.rb
+
+      - name: brew test
+        run: brew test ./Formula/vermastaff.rb
