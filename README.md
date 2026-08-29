@@ -1,6 +1,6 @@
 # verma-consulting/homebrew-tap
 
-Homebrew tap for [vermaStaff](https://github.com/verma-consulting/vermastaff) — the local-first AI workforce operating system for your Mac.
+Homebrew tap for [vermastaff](https://github.com/verma-consulting/vermastaff) — the local-first AI workforce operating system for your Mac.
 
 ## Install
 
@@ -11,7 +11,7 @@ brew install vermastaff
 
 ### Prerequisites
 
-vermaStaff needs **[Ollama](https://ollama.com)** running locally for models:
+vermastaff needs **[Ollama](https://ollama.com)** running locally for models:
 
 ```bash
 brew install ollama
@@ -20,7 +20,7 @@ ollama serve
 ollama pull qwen2.5:7b
 ```
 
-Also requires a recent **Node** (Homebrew’s `node` formula; vermaStaff needs ≥ 24.15.0).
+Also requires a recent **Node** (Homebrew’s `node` formula; vermastaff needs ≥ 24.15.0).
 
 ## Verify
 
@@ -41,3 +41,7 @@ npm install -g @verma-consulting/vstaff
 ## Updating
 
 Formula bumps are opened automatically from the [vermastaff](https://github.com/verma-consulting/vermastaff) release workflow after each npm publish. Review and merge the PR on this tap.
+
+## License
+
+Copyright Verma Consulting. All rights reserved. Proprietary — no public grant. See [`LICENSE`](./LICENSE). The formula uses Homebrew's `license :cannot_represent`.

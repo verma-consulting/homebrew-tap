@@ -4,7 +4,7 @@ class Vermastaff < Formula
   homepage "https://www.npmjs.com/package/@verma-consulting/vermastaff"
   url "https://registry.npmjs.org/@verma-consulting/vermastaff/-/vermastaff-0.1.0.tgz"
   sha256 "b267b14eb7591e41b1af25e116d5360aa8364321cb406afaf6f343944d583c73"
-  license :cannot_represent
+  license :cannot_represent # proprietary — Verma Consulting, all rights reserved
 
   depends_on "node"
 

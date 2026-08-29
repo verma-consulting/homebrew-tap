@@ -1,0 +1,50 @@
+Copyright (c) 2022-2026 Verma Consulting. All rights reserved.
+
+This software and associated documentation files (the "Software") are the
+exclusive confidential property of Verma Consulting ("Verma").
+
+NO LICENSE IS GRANTED. Except as expressly agreed in a written contract
+signed by Verma, no person or entity may use, copy, modify, merge, publish,
+distribute, sublicense, sell, or otherwise exploit the Software, in whole
+or in part.
+
+Without a written grant from Verma, you must not:
+
+  (a) copy, reproduce, or create derivative works of the Software;
+  (b) distribute, disclose, sublicense, lease, rent, or make the Software
+      available to any third party;
+  (c) reverse engineer, decompile, or disassemble the Software, except to
+      the limited extent applicable law prohibits this restriction, and
+      only after written notice to Verma so Verma can provide
+      interoperability information if required;
+  (d) remove or alter any proprietary notices;
+  (e) use Verma's names or marks except as Verma permits in writing;
+  (f) claim ownership of the Software.
+
+Any right to install or use a Verma product — including vermadev,
+vermastaff, and workflowslab.ai deliverables — is granted only under a
+separate written agreement with Verma. That agreement, not this file,
+controls those rights. Those rights never include ownership of the
+Software. All intellectual property remains exclusively with Verma.
+
+Feedback you provide may be used by Verma without restriction or
+compensation.
+
+Third-party components bundled with or used by the Software remain
+subject to their own licenses, which control as to those components.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND
+NON-INFRINGEMENT. IN NO EVENT SHALL VERMA BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR
+OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR
+THE USE OR OTHER DEALINGS IN THE SOFTWARE, TO THE MAXIMUM EXTENT
+PERMITTED BY APPLICABLE LAW.
+
+This file is governed by the laws of the State of California, United
+States of America, without regard to conflict-of-law rules. Exclusive
+venue lies in the state and federal courts located in California.
+
+All rights not expressly granted in a written contract with Verma are
+reserved.
