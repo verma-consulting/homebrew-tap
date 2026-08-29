@@ -2,9 +2,9 @@ class Vermastaff < Formula
   desc "AI workforce operating system for your Mac"
   # Public URL — the GitHub source repo may be private (brew audit --online).
   homepage "https://www.npmjs.com/package/@verma-consulting/vermastaff"
-  url "https://registry.npmjs.org/@verma-consulting/vermastaff/-/vermastaff-0.1.0.tgz"
-  sha256 "b267b14eb7591e41b1af25e116d5360aa8364321cb406afaf6f343944d583c73"
-  license :cannot_represent # proprietary — Verma Consulting, all rights reserved
+  url "https://registry.npmjs.org/@verma-consulting/vermastaff/-/vermastaff-0.1.6.tgz"
+  sha256 "6ada63df50fc78cd982317c5af8d407a6c4055bdecd9b69d641667482f6fcf55"
+  license :cannot_represent
 
   depends_on "node"
 
